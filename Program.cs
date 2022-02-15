@@ -1,8 +1,12 @@
+using BookStoreApi.Interfaces;
 using BookStoreApi.Models;
+using BookStoreApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<IBooksService, BooksService>();
+
 builder.Services.Configure<BookStoreDatabaseSettings>(
     builder.Configuration.GetSection("BookStoreDatabase"));
 
