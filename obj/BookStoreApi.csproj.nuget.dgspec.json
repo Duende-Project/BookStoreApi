@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/haroldhopson/Workspace/BookStoreApi/BookStoreApi.csproj": {}
+    "/Users/haroldhopson/Workspace/quickstart/BookStoreApi/BookStoreApi.csproj": {}
   },
   "projects": {
-    "/Users/haroldhopson/Workspace/BookStoreApi/BookStoreApi.csproj": {
+    "/Users/haroldhopson/Workspace/quickstart/BookStoreApi/BookStoreApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/haroldhopson/Workspace/BookStoreApi/BookStoreApi.csproj",
+        "projectUniqueName": "/Users/haroldhopson/Workspace/quickstart/BookStoreApi/BookStoreApi.csproj",
         "projectName": "BookStoreApi",
-        "projectPath": "/Users/haroldhopson/Workspace/BookStoreApi/BookStoreApi.csproj",
+        "projectPath": "/Users/haroldhopson/Workspace/quickstart/BookStoreApi/BookStoreApi.csproj",
         "packagesPath": "/Users/haroldhopson/.nuget/packages/",
-        "outputPath": "/Users/haroldhopson/Workspace/BookStoreApi/obj/",
+        "outputPath": "/Users/haroldhopson/Workspace/quickstart/BookStoreApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/haroldhopson/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.14.1, )"

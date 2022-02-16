@@ -1,3 +1,5 @@
+using Microsoft.IdentityModel.Tokens;
+
 using BookStoreApi.Interfaces;
 using BookStoreApi.Models;
 using BookStoreApi.Services;
@@ -5,6 +7,17 @@ using BookStoreApi.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
+    {
+        options.Authority = "https://localhost:5001";
+
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateAudience = false
+        };
+    });
+    
 builder.Services.AddScoped<IBooksService, BooksService>();
 
 builder.Services.Configure<BookStoreDatabaseSettings>(
@@ -27,6 +40,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// app.UseAuthentication();
 
 app.UseAuthorization();
 
